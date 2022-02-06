@@ -1,3 +1,4 @@
+
 public ArrayList<Stick> fractalTree = new ArrayList<Stick>();
 public ArrayList<PVector> leaves = new ArrayList<PVector>();
 public int count = 0;
