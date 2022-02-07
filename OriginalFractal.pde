@@ -9,16 +9,14 @@ public void setup() {
   PVector orig = new PVector(width / 2, height);
   PVector orig2 = new PVector(width / 2, height - 100);
   Stick root = new Stick(orig, orig2); 
-  //if (count<6){
-  //    fill(162,42,42); 
-  //   }
+
   fractalTree.add(root);
 }
 
 public void mousePressed() {
   for (int i = fractalTree.size() -1; i >= 0; i--) {
     Stick tree = fractalTree.get(i);
-    
+
     if (!tree.sprout) {
 
       fractalTree.add(tree.StickA());
@@ -40,28 +38,47 @@ public void mousePressed() {
 
 public void draw() {
   int daylight = 85;
+  int moonPos=20;
   if (count>=1){
-   daylight-=10; 
+   daylight-=10;
+   moonPos+=5;
   }
   if (count>=2){
-    daylight-=10;
+    daylight-=6;
+     moonPos+=5;
   }
   if (count>=3){
-    daylight-=10;
+    daylight-=4;
+     moonPos+=5;
   }
   if (count>=4){
-    daylight-=8;
+    daylight-=4;
+     moonPos+=5;
   }
   if (count>=5){
-    daylight-=7;
+    daylight-=3;
+     moonPos+=5;
   }
   if (count>=6){
     daylight-=5;
+     moonPos+=5;
+  }
+  if (count>=7){
+    daylight-=5;
+     moonPos+=5;
+  }
+  if (count>=8){
+    daylight-=5;
+     moonPos+=5;
+  }
+   if (count>=9){
+    daylight-=5;
+     moonPos+=5;
   }
   background(0, daylight, 102);
   stroke(255);
   fill(192);
-  ellipse(20, 20, 30, 30);
+  ellipse(moonPos, 20, 30, 30);
   noStroke (); 
   for (int i=0; i<cloudy.length; i++) {
     fill(49, 99, 0);
