@@ -18,7 +18,7 @@ public void setup() {
 public void mousePressed() {
   for (int i = fractalTree.size() -1; i >= 0; i--) {
     Stick tree = fractalTree.get(i);
-    //if the current Stick has no children: add them
+    
     if (!tree.sprout) {
 
       fractalTree.add(tree.StickA());
