@@ -1,4 +1,3 @@
-
 public ArrayList<Stick> fractalTree = new ArrayList<Stick>();
 public ArrayList<PVector> leaves = new ArrayList<PVector>();
 public int count = 0;
@@ -40,7 +39,26 @@ public void mousePressed() {
 }
 
 public void draw() {
-  background(0, 51, 102);
+  int daylight = 85;
+  if (count>=1){
+   daylight-=10; 
+  }
+  if (count>=2){
+    daylight-=10;
+  }
+  if (count>=3){
+    daylight-=10;
+  }
+  if (count>=4){
+    daylight-=8;
+  }
+  if (count>=5){
+    daylight-=7;
+  }
+  if (count>=6){
+    daylight-=5;
+  }
+  background(0, daylight, 102);
   stroke(255);
   fill(192);
   ellipse(20, 20, 30, 30);
