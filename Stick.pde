@@ -1,6 +1,6 @@
 class Stick {
   public PVector start;
-  public PVector finalS;
+   PVector finalS;
   public boolean sprout = false;
 
 
