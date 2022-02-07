@@ -1,19 +1,19 @@
-class Stick {
+public class Stick {
   public PVector start;
    PVector finalS;
   public boolean sprout = false;
 
 
   Stick(PVector begin, PVector end) {
-    this.start = begin;
-    this.finalS = end;
+    start = begin;
+    finalS = end;
   }
-  void rando() {
+  public void rando() {
     finalS.x += random(-1, 1);
     finalS.y += random(-1, 1);
   }
 
-  void show() {
+ public  void show() {
 
     stroke(51, 25, 0);
     line(start.x, start.y, finalS.x, finalS.y);
